@@ -11,7 +11,10 @@ namespace People.Models
     [Table("people")]
     public class AQPerson
     {
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
+
+        [MaxLength(250), Unique]
         public string Name { get; set; }
     }
 }
